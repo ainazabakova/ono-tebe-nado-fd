@@ -237,7 +237,7 @@ body {
 .about__text {
   font-size: 20px;
   line-height: 24px;
-  width: 689px; /*ПОФИКСИТЬ ПЕРЕНОС ТЕКСТА*/
+  width: 689px;
   display: grid;
   gap: 24px;
 }
@@ -283,6 +283,6 @@ body {
   text-decoration: none;
 }
 
-.header__links-list-item_no-bullit{
+.header__links-list-item_no-bullit {
   list-style: none;
 }
