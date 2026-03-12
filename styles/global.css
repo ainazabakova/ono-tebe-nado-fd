@@ -9,6 +9,10 @@ body {
   width: 1100px;
   margin: 0 auto;
   font-family: Raleway, sans-serif;
+  background-color: white;
+  font-weight: 400;
+  color: black;
+  font-style: normal;
 }
 
 h1,

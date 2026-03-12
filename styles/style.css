@@ -1,20 +1,9 @@
-body {
-  background-color: white;
-  margin: 0;
-  padding: 0;
-  font-family: "Raleway", "Arial", sans-serif;
-  font-weight: 400;
-  color: black;
-  font-style: normal;
-}
-
 .header {
   padding: 95px 45px 96px 45px;
   font-size: 18px;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  margin-top: -2px;
   margin-bottom: 2px;
 }
 
@@ -23,8 +12,13 @@ body {
   list-style-type: circle;
   gap: 28px;
 }
+
 .header__links-list-item {
   padding-left: 5px;
+}
+
+.header__links-list-item_no-bullit {
+  list-style: none;
 }
 
 .header__logo {
@@ -52,8 +46,9 @@ body {
   background-image: url("../images/cover.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 757px;
+  min-height: 755px;
   display: flex;
+  flex-direction: column;
   position: relative;
 }
 
@@ -66,19 +61,22 @@ body {
 }
 
 .cover__title {
-  padding: 0 50px 0;
+  padding: 0 50px;
   color: white;
   font-size: 100px;
   font-weight: 700;
-  letter-spacing: 30%;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
+  line-height: 114.99999999999999%;
   position: relative;
+  z-index: 2;
 }
 
 .aligned-text {
   display: flex;
-  height: min-content;
+  flex-direction: column;
   width: 100%;
+  gap: 22px;
 }
 
 .aligned-text_left {
@@ -88,15 +86,12 @@ body {
 
 .aligned-text_center {
   text-align: center;
-  margin-top: 300px;
-  margin-left: 15px;
+  padding-left: 30px;
 }
 
 .aligned-text_right {
   text-align: right;
-  margin-top: 435px;
-  position: relative;
-  right: 86px;
+  padding-left: 613px;
 }
 
 .cover__description {
@@ -107,9 +102,11 @@ body {
   line-height: 28px;
   align-items: center;
   word-spacing: 18px;
-  padding: 40px 50px;
+  padding: 40px 50px 50px 50px;
   justify-content: space-between;
-  margin-top: 66px;
+  margin-top: auto;
+  z-index: 2;
+  position: relative;
 }
 
 .cover__description-text {
@@ -119,13 +116,19 @@ body {
 }
 
 .bet-button {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  line-height: inherit;
+  text-transform: inherit;
   font-weight: 500;
-  justify-self: right;
-  border: 1px;
-  border-color: white;
-  border-style: solid;
+  border: 1px solid white;
   padding: 12px 32px 9px 30px;
   word-spacing: 2px;
+  justify-self: right;
+  align-self: center;
 }
 
 .lots_heading {
@@ -134,21 +137,25 @@ body {
   text-transform: uppercase;
   margin-left: 64px;
   margin-bottom: 27px;
-  margin-top: 182px;
+  margin-top: 180px;
 }
 .lots__card-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
   flex-direction: row;
   color: white;
   justify-content: center;
   margin-bottom: 30px;
 }
+
 .lots__card-list-item {
   width: 334px;
-  height: 596px;
+  min-height: max-content;
   margin: 0;
   padding: 0;
+  background-size: cover;
+  background-position: center;
 }
 
 .card-link {
@@ -159,9 +166,7 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 596px;
-  padding: 48px 40px;
+  height: 596px;
   background-size: cover;
   background-position: center;
   margin-top: auto;
@@ -170,20 +175,14 @@ body {
 
 .card_type_film {
   background-image: url("../images/card-lot-01.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .card_type_book {
   background-image: url("../images/card-lot-02.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .card_type_picture {
   background-image: url("../images/card-lot-03.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .card__title {
@@ -191,12 +190,16 @@ body {
   font-size: 22px;
   text-transform: uppercase;
   text-decoration: underline solid;
+  z-index: 2;
+  padding: 48px 40px 0 40px;
 }
 .card-text {
   font-weight: 400;
   font-size: 20px;
   margin-top: auto;
   line-height: 120%;
+  z-index: 2;
+  padding: 0 40px 48px 40px;
 }
 
 .lots__look-more-link {
@@ -212,8 +215,8 @@ body {
   margin-top: 155px;
   margin-left: 72px;
 }
+
 .about__logo {
-  margin-left: -1px;
   width: 240px;
   height: 240px;
   border-radius: 50%;
@@ -253,7 +256,6 @@ body {
   margin-top: 182px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: space-between;
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 0;
@@ -261,7 +263,6 @@ body {
 }
 
 .footer__menu {
-  height: 64px;
   justify-items: center;
   text-align: center;
   line-height: 21px;
@@ -290,8 +291,4 @@ body {
 
 .active-link {
   text-decoration: none;
-}
-
-.header__links-list-item_no-bullit {
-  list-style: none;
 }
