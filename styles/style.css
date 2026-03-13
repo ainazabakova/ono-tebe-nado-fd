@@ -86,12 +86,14 @@
 
 .aligned-text_center {
   text-align: center;
-  padding-left: 30px;
 }
 
 .aligned-text_right {
   text-align: right;
-  padding-left: 613px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
 }
 
 .cover__description {
@@ -143,7 +145,8 @@
   gap: 25px;
   flex-direction: row;
   color: white;
-  justify-content: center;
+  justify-content: start;
+  margin-left: 24px;
   margin-bottom: 30px;
 }
 
@@ -164,7 +167,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  height: 596px;
+  min-height: 596px;
   background-size: cover;
   background-position: center;
   margin-top: auto;
@@ -256,8 +259,8 @@
   grid-template-columns: repeat(3, 1fr);
   padding-left: 50px;
   padding-right: 50px;
-  padding-bottom: 0;
-  margin-bottom: 0;
+  padding-bottom: 85px;
+  margin-bottom: 0px;
 }
 
 .footer__menu {
@@ -278,8 +281,6 @@
   margin: 0;
   max-width: 240px;
   justify-self: end;
-  padding-bottom: 0;
-  margin-bottom: 0;
 }
 
 .footer__social-list-item {
